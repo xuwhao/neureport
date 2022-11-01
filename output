@@ -1,5 +1,0 @@
-./ config.json
-2022/11/01 09:23:18 Starting report use Student ID [2171960]...
-2022/11/01 09:23:20 Send report request with params:  map[_token:7pTeXdVcWc9VWeeOHxgjHZGJ9LPLXBPooctswL6Y cross_city:无 jiankangxinxi_muqianshentizhuangkuang:正常 jibenxinxi_shifoubenrenshangbao:1 profile[suoshubanji]: profile[xingming]: profile[xuegonghao]:2171960 qitashixiang_qitaxuyaoshuomingdeshixiang: xingchengxinxi_weizhishifouyoubianhua:0]
-2022/11/01 09:23:20 Raw query URL: https://e-report.neu.edu.cn/api/notes?_token=7pTeXdVcWc9VWeeOHxgjHZGJ9LPLXBPooctswL6Y&cross_city=%E6%97%A0&jiankangxinxi_muqianshentizhuangkuang=%E6%AD%A3%E5%B8%B8&jibenxinxi_shifoubenrenshangbao=1&profile%5Bsuoshubanji%5D=&profile%5Bxingming%5D=&profile%5Bxuegonghao%5D=2171960&qitashixiang_qitaxuyaoshuomingdeshixiang=&xingchengxinxi_weizhishifouyoubianhua=0
-2022/11/01 09:23:20 Report successfually, See you tomorrow!
