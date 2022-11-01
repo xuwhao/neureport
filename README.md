@@ -28,7 +28,7 @@ sudo chmod +x neuport
 
 路径在可执行文件同级目录，文件名为 config.json. 结构如下。
 
-```shell
+```tree
 .
 |-- neureport
 |-- config.json
@@ -63,10 +63,14 @@ sudo chmod +x neuport
 
 ### 非首次上报
 
+|配置项|说明|
+|---|---|
+|StudentID|学号|
+|Password|统一身份认证密码|
 ```json
 {
     "StudentID":"",
-    "password":"",
+    "Password":"",
     "info": {
         "jibenxinxi_shifoubenrenshangbao": "1", 
         "profile[xuegonghao]": "2171960",
