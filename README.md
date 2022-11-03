@@ -106,3 +106,37 @@ sudo chmod +x neuport
   }
 }
 ```
+
+### crontab + mailx 执行定时任务
+
+Linux 环境下安装 mailx. 
+
+用 crontab 执行下列脚本即可，实现每天定时执行，失败了发邮件提醒。
+
+路径都用绝对路径。
+
+```bash
+#!/bin/bash
+
+<neureport excutable file path> -fpath <config folder absolute path> -fname <config file name> > <log path> 2>&1
+
+if [ $? -eq 0 ]
+then
+  rm -rf <log path>
+else
+  mailx -s "NEU Report Failed" your_mail@mail.com < <log path>
+fi
+
+```
+
+crontab 定时任务，设置每天 14 点，17 点，20 点执行一次。
+
+```shell
+crontab -e
+```
+
+```shell
+0 14,17,20 * * * <script path>
+```
+
+
