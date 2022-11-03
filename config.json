@@ -1,14 +1,26 @@
 {
-    "StudentID":"21*****",
-    "password":"",
-    "info": {
-        "jibenxinxi_shifoubenrenshangbao": "1", 
-        "profile[xuegonghao]": "21*****",
-        "profile[xingming]": "",
-        "profile[suoshubanji]": "",
-        "jiankangxinxi_muqianshentizhuangkuang": "正常",
-        "xingchengxinxi_weizhishifouyoubianhua": "0",
-        "cross_city": "无", 
-        "qitashixiang_qitaxuyaoshuomingdeshixiang": ""
-      }
+  "StudentID": "21*****",
+  "password": "******",
+  "info": {
+    "_token": "",
+    "jibenxinxi_shifoubenrenshangbao": "1",
+    "profile": {
+      "xuegonghao": "21*****",
+      "xingming": "***",
+      "suoshubanji": "计硕****"
+    },
+    "jiankangxinxi_muqianshentizhuangkuang": "正常",
+    "xingchengxinxi_weizhishifouyoubianhua": "0",
+    "cross_city": "无",
+    "qitashixiang_qitaxuyaoshuomingdeshixiang": "",
+    "credits": "3",
+    "bmap_position": "{\"accuracy\":118,\"altitude\":null,\"altitudeAccuracy\":null,\"heading\":null,\"latitude\":30.18732056999,\"longitude\":120.27302702919,\"speed\":null,\"timestamp\":null,\"point\":{\"lng\":120.27302702919,\"lat\":303.18732056999,\"of\":\"inner\"},\"address\":{\"city\":\"杭州市\",\"city_code\":0,\"district\":\"滨江区\",\"province\":\"浙江省\",\"street\":\"滨文路\",\"street_number\":\"528号\"}}",
+    "bmap_position_latitude": "20.18732056999",
+    "bmap_position_longitude": "220.27302702919",
+    "bmap_position_address": "浙江省,杭州市",
+    "bmap_position_status": "0",
+    "ProvinceCode": "330000",
+    "CityCode": "330101",
+    "travels": []
+  }
 }

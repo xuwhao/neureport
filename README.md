@@ -57,69 +57,52 @@ sudo chmod +x neuport
 
 ## 配置文件格式
 
-目前只支持非首次上报，切不更换地区。意思就是，如果你一直待在某个城市没变，直接用下方这个配置文件即可。
+目前只支持非首次上报，且不更换地区。意思就是，如果你一直待在某个城市没变，直接用下方这个配置文件即可。
 
-若位置变换，请手动上报一次，再使用这个配置文件。
+若位置变换，请手动上报一次，再使用这个配置文件。带 '*' 号的需要修改为自己的信息。
 
-### 非首次上报
+配置文件中的填报地址是杭州的，需要改成你所在的位置。等我返校了上传一版沈阳的。或者可以自己抓包。
+
+前往 https://e-report.neu.edu.cn/mobile/notes/create，按正常填报方式填好信息。然后 F12 再断网点提交。 将 https://e-report.neu.edu.cn/api/notes 这个地址的请求 Json 直接复制到配置文件的 info 项中即可。
+
+### 配置项说明
 
 |配置项|说明|
 |---|---|
 |StudentID|学号|
 |Password|统一身份认证密码|
-```json
-{
-    "StudentID":"",
-    "Password":"",
-    "info": {
-        "jibenxinxi_shifoubenrenshangbao": "1", 
-        "profile[xuegonghao]": "2171960",
-        "profile[xingming]": "",
-        "profile[suoshubanji]": "",
-        "jiankangxinxi_muqianshentizhuangkuang": "正常",
-        "xingchengxinxi_weizhishifouyoubianhua": "0",
-        "cross_city": "无", 
-        "qitashixiang_qitaxuyaoshuomingdeshixiang": ""
-      }
-}
-```
+|ProvinceCode|省份区划码|
+|CityCode|城市区划码|
+|credits|暂时不清楚，填默认的3，可以抓包看看自己的|
+|bmap_position 相关|上报时的地址信息，应该是根据 IP 来的，猜测调用的百度地图的 API|
 
-### [WIP] RoadMap
-
-所有参数，未完成。
+### Json 文件
 
 ```json
 {
-    "StudentID":"",
-    "password":"",
-    "info": {
-        "jibenxinxi_shifoubenrenshangbao": "1", 
-        "profile[xuegonghao]": "2171960",
-        "profile[xingbie]": "1",
-        "profile[zhengjianleixing]": "",
-        "profile[lianxidianhua]": "",
-        "profile[shenfenleixing]": "",
-        "profile[jinjilianxirenxingming]": "",
-        "profile[xingming]": "",
-        "profile[chushengriqi]": "",
-        "profile[zhengjianhaoma]": "",
-        "profile[suoshudanwei]": "",
-        "profile[suoshubanji]": "",
-        "profile[jinjilianxirendianhua]": "",
-        "jiankangxinxi_muqianshentizhuangkuang": "正常",
-        "xingchengxinxi_weizhishifouyoubianhua": "1",
-        "xingchengxinxi_guojia": "中国",
-        "xingchengxinxi_shengfen": "浙江省",
-        "xingchengxinxi_chengshi": "xxx市",
-        "xingchengxinxi_quxian": "",
-        "cross_city": "是/", // 无
-        "qitashixiang_qitaxuyaoshuomingdeshixiang": "",
-        "travels[0][chufadi]": "中国,北京市,市辖区",
-        "travels[0][likaishijian]": "2022-11-24",
-        "travels[0][mudidi]": "中国,天津市,市辖区",
-        "travels[0][didashijian]": "2022-11-30",
-        "travels[0][jiaotonggongju]": "火车",
-        "travels[0][checi]": "3434"
-      }
+  "StudentID": "21*****",
+  "password": "******",
+  "info": {
+    "_token": "",
+    "jibenxinxi_shifoubenrenshangbao": "1",
+    "profile": {
+      "xuegonghao": "21*****",
+      "xingming": "***",
+      "suoshubanji": "计硕****"
+    },
+    "jiankangxinxi_muqianshentizhuangkuang": "正常",
+    "xingchengxinxi_weizhishifouyoubianhua": "0",
+    "cross_city": "无",
+    "qitashixiang_qitaxuyaoshuomingdeshixiang": "",
+    "credits": "3",
+    "bmap_position": "{\"accuracy\":118,\"altitude\":null,\"altitudeAccuracy\":null,\"heading\":null,\"latitude\":30.18732056999,\"longitude\":120.27302702919,\"speed\":null,\"timestamp\":null,\"point\":{\"lng\":120.27302702919,\"lat\":303.18732056999,\"of\":\"inner\"},\"address\":{\"city\":\"杭州市\",\"city_code\":0,\"district\":\"滨江区\",\"province\":\"浙江省\",\"street\":\"滨文路\",\"street_number\":\"528号\"}}",
+    "bmap_position_latitude": "20.18732056999",
+    "bmap_position_longitude": "220.27302702919",
+    "bmap_position_address": "浙江省,杭州市",
+    "bmap_position_status": "0",
+    "ProvinceCode": "330000",
+    "CityCode": "330101",
+    "travels": []
+  }
 }
 ```
